@@ -1,0 +1,31 @@
+body, html {
+    height: 100%;
+    font-family: Poppins-Regular, sans-serif;
+  }
+
+  #AttendeeHeader{
+      text-align: center;
+      color: #046A38;
+  }
+
+  #ProfileList{
+      align-items: left;
+  }
+
+  #ProfileField {
+    text-align: right;
+    font-variant: small-caps;
+}
+
+.title {
+    float: left;
+    width: 150px;
+    text-align: left; 
+    padding-right: 10px;
+    font-variant: small-caps;
+}
+
+.submit {
+    text-align: left;
+    padding-top: 20px;
+}

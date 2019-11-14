@@ -3,14 +3,33 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomescreenComponent } from './homescreen/homescreen.component';
+import { LoginattendeeComponent } from './loginattendee/loginattendee.component';
+import { LoginemployerComponent } from './loginemployer/loginemployer.component';
+import { CareerfairComponent } from './careerfair/careerfair.component';
+import { CareerfairdetailComponent } from './careerfairdetail/careerfairdetail.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AttendeeComponent } from './attendee/attendee.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomescreenComponent,
+    LoginattendeeComponent,
+    LoginemployerComponent,
+    CareerfairComponent,
+    CareerfairdetailComponent,
+    AttendeeComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

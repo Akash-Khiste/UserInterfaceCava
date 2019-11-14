@@ -1,0 +1,60 @@
+<body>
+    <h1 id="AttendeeHeader">My Profile</h1>
+
+    <form [formGroup]="profileForm" (ngSubmit)="callingFunction()">
+        <div class="profileSectionHeader">CONTACT INFORMATION</div>
+
+        <div>
+            <label class="title">First Name<input class="inputBox" type="text" formControlName="firstName"></label>
+        </div> <br>
+        <div>
+            <label class="title">Last Name<input type="text" formControlName="lastName"></label>
+        </div> <br>
+        <div>
+            <label class="title">Email<input type="text" formControlName="email"></label>
+        </div> <br>
+
+        <div class="profileSectionHeader">ADDRESS</div>
+
+        <div>
+            <label class="title">Street<input type="text" formControlName="streetName"></label>
+        </div> <br>
+        <div>
+            <label class="title">City<input type="text" formControlName="city"></label>
+        </div><br>
+        <div>
+            <label class="title">State<input type="text" formControlName="state"></label>
+        </div> <br>
+        <div>
+            <label class="title">Zipcode<input type="text" formControlName="zipCode"></label>
+        </div> <br>
+
+       <div class="profileSectionHeader">EDUCATION</div>
+
+        <div>
+            <label class="title">Major:<input type="text" formControlName="major"> </label>
+        </div> <br>
+        <div>
+            <label class="title"> Minor:<input type="text" formControlName="minor"> </label>
+        </div> <br>
+        <div>
+            <label class="title">Total GPA:<input type="text" formControlName="totalGPA"> </label>
+        </div> <br>
+        <div>
+            <label class="title">Degree:<input type="text" formControlName="degree"> </label>
+        </div> <br>
+        <div>
+            <label class="title">Certifications:<input type="text" formControlName="certifications"></label>
+        </div> <br>
+        <div>
+            <label class="title">Languages: <input type="text" formControlName="languages"></label>
+        </div> <br>
+        <div>
+            <label class="title"> Bio:<input type="text" formControlName="bio"></label>
+        </div> <br>
+        <div class="submit">
+            <button type="submit">Submit Profile</button>
+        </div>
+    </form>
+
+</body>

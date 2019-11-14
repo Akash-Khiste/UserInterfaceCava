@@ -1,0 +1,44 @@
+<h1 id="AttendeeHeader">YOUR PROFILE</h1>
+
+<label>First Name: {{profileViewModel?.attendee?.firstName}}
+</label> <br>
+<label>Last Name: {{profileViewModel?.attendee?.lastName}}
+</label> <br>
+<label>
+    Email: {{profileViewModel?.attendee?.email}}
+</label> <br>
+<label>
+    Street: {{profileViewModel?.attendee?.streetName}}
+</label> <br>
+<label>
+    City: {{profileViewModel?.attendee?.city}}
+</label> <br>
+<label>
+    State: {{profileViewModel?.attendee?.state}}
+</label> <br>
+<label>
+    Zipcode: {{profileViewModel?.attendee?.zipCode}}
+</label> <br>
+<label>
+    Major: {{profileViewModel?.attendeeProfile?.major}}
+    </label> <br>
+<label>
+    Minor: {{profileViewModel?.attendeeProfile?.minor}}
+ </label> <br>
+<label>
+    Total GPA: {{profileViewModel?.attendeeProfile?.totalGPA}}
+   
+</label> <br>
+<label>
+    Degree Pursuing: {{profileViewModel?.attendeeProfile?.degree}}
+  </label> <br>
+<label>
+    Certifications: {{profileViewModel?.attendeeProfile?.certifications}}
+  </label> <br>
+<label>
+    Languages: {{profileViewModel?.attendeeProfile?.languages}}
+   </label> <br>
+
+<button routerLink="/attendee">Update Profile</button>
+
+<a routerLink="/careerfar" routerLinkActive="active">Return to Career Fairs</a>  <br>

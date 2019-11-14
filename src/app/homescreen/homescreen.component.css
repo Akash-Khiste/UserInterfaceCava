@@ -1,0 +1,52 @@
+.my-nav{
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    color: white;
+  
+  }
+  body  {
+    /* background-image: url("../../assets/images/homescreen.jpg"); */
+    background-color: #cccccc;
+  }
+  
+  /*.jumbotron{
+    background-image:url("../../assets/images/homescreen.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+  }*/
+  
+  
+  /*css for the backgrounf
+  */
+  /*
+  .bg-image-1 {
+    background: url('../../assets/images/homescreen.jpg');
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-attachment: initial;
+    background-repeat: no-repeat;
+    background-color: #171717;
+  }
+  
+  */
+  
+  /* Set a background image by replacing the URL below */
+  body {
+    /* background: url('../../assets/images/Homescreen.jpeg') no-repeat center center fixed; */
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  }
+  
+  
+  
