@@ -8,6 +8,7 @@ import {CareerfairdetailComponent} from './careerfairdetail/careerfairdetail.com
 import {AttendeeComponent} from './attendee/attendee.component';
 import {ProfileComponent} from './profile/profile.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import {AttendeecareerfairComponent} from './attendeecareerfair/attendeecareerfair.component';
 
 
 
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: 'careerfairdetail', component: CareerfairdetailComponent},
   {path: 'attendee', component: AttendeeComponent},
   {path: 'profile', component: ProfileComponent},
+  {path: 'attendeecareerfair', component: AttendeecareerfairComponent}
 ];
 
 @NgModule({

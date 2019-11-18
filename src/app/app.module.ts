@@ -12,6 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AttendeeComponent } from './attendee/attendee.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { AttendeecareerfairComponent } from './attendeecareerfair/attendeecareerfair.component';
+import { AdmincareerfairComponent } from './admincareerfair/admincareerfair.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     CareerfairComponent,
     CareerfairdetailComponent,
     AttendeeComponent,
-    ProfileComponent
+    ProfileComponent,
+    AttendeecareerfairComponent,
+    AdmincareerfairComponent
   ],
   imports: [
     BrowserModule,
