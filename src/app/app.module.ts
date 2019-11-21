@@ -14,6 +14,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AttendeecareerfairComponent } from './attendeecareerfair/attendeecareerfair.component';
 import { AdmincareerfairComponent } from './admincareerfair/admincareerfair.component';
+import { CookieService } from 'ngx-cookie-service';
+import { LoginadminComponent } from './loginadmin/loginadmin.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { AdmincareerfairComponent } from './admincareerfair/admincareerfair.comp
     AttendeeComponent,
     ProfileComponent,
     AttendeecareerfairComponent,
-    AdmincareerfairComponent
+    AdmincareerfairComponent,
+    LoginadminComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,7 @@ import { AdmincareerfairComponent } from './admincareerfair/admincareerfair.comp
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ CookieService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

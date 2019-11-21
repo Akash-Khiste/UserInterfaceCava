@@ -1,21 +1,22 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
-import {FormGroup} from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { FormGroup, FormControl } from '@angular/forms';
+import { stringify } from 'querystring';
 
 
 export class CareerFair {
   constructor(
-    private careerFairID : string,
-    private name:string,
-    private venue:string,
-    private date:string){}
+    private careerFairID: string,
+    private name: string,
+    private venue: string,
+    private date: string) { }
 }
 
 export class Companies {
   constructor(
     private companyname: string,
-   ) { }
+  ) { }
 }
 
 export class Attendee {
@@ -51,16 +52,36 @@ export class ProfileViewModel {
   ) { }
 }
 
+export class Employer {
+  constructor(
+    public id: string,
+    public companyID: string,
+    public companyName: string,
+    public email: string,
+    public password: string) { }
+}
+
+export class Administrator {
+  constructor(
+    public id: string,
+    public employeeID: string,
+    public firstName: string,
+    public lastName: string,
+    public email: string,
+    public password: string,
+  ) { }
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class HttpClientService {
 
-  constructor(private httpClient : HttpClient) { }
+
+  constructor(private httpClient: HttpClient) { }
 
 
-  getCareerFair(){
+  getCareerFair() {
     console.log("Test Call");
     return this.httpClient.get<CareerFair[]>('http://localhost:8080/careerfairs/');
   }
@@ -71,17 +92,24 @@ export class HttpClientService {
     return this.httpClient.get<Companies[]>('http://localhost:8080/companies/');
   }
 
+  addAttendeeProfile(formGroup: FormGroup, userId: string): Observable<any> {
+    return this.httpClient.post<Attendee>('http://localhost:8080/attendees/' + userId + '/profile', formGroup.value);
+  }
 
-    // AUDRATODO -- the URL is hard-coded with "4" --- need to put the ID of the attendee here via Cookie
-    addAttendeeProfile(FormGroup: FormGroup): Observable<any> {
-      return this.httpClient.post<Attendee>('http://localhost:8080/attendees/4/profile',FormGroup.value);
-      }
+  getProfileViewModel(userId: string): Observable<ProfileViewModel> {
+    return this.httpClient.get<ProfileViewModel>('http://localhost:8080/attendees/' + userId + '/profile');
 
-    // AUDRATODO -- the URL is hard-coded with "4" --- need to put the ID of the attendee here via Cookie
-    getProfileViewModel(): Observable<ProfileViewModel> {
-      return this.httpClient.get<ProfileViewModel>('http://localhost:8080/attendees/4/profile');
-  
-    }
-  
+  }
 
+  employerLogin(formGroup: FormGroup): Observable<Employer> {
+    return this.httpClient.post<Employer>('http://localhost:8080/validateEmployer', formGroup.value);
+  }
+
+  attendeeLogin(formGroup: FormGroup): Observable<Attendee> {
+    return this.httpClient.post<Attendee>('http://localhost:8080/validateAttendee', formGroup.value);
+  }
+
+  adminLogin(formGroup: FormGroup): Observable<Administrator> {
+    return this.httpClient.post<Administrator>('http://localhost:8080/validateAdministrator', formGroup.value);
+  }
 }

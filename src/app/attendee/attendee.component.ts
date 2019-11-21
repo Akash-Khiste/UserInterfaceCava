@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClientService, ProfileViewModel} from '../service/http-client.service';
+import { HttpClientService, ProfileViewModel } from '../service/http-client.service';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-attendee',
@@ -9,7 +10,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./attendee.component.css']
 })
 export class AttendeeComponent implements OnInit {
-
+  private cookieValue: string;
   profileViewModel: ProfileViewModel;
 
   //setting up the form
@@ -30,12 +31,15 @@ export class AttendeeComponent implements OnInit {
     bio: new FormControl('')
   })
 
-  constructor(private httpClientService: HttpClientService) { }
+  constructor(private httpClientService: HttpClientService, private cookieService: CookieService) { }
 
   ngOnInit() {
 
+    // get the cookie for user ID 
+    this.cookieValue = this.cookieService.get('userID');
+
     var observable: Observable<ProfileViewModel>;
-    observable = this.httpClientService.getProfileViewModel();
+    observable = this.httpClientService.getProfileViewModel(this.cookieValue);
     observable.subscribe(response => {
       this.profileViewModel = response;
       this.profileForm.get("firstName").setValue(this.profileViewModel.attendee.firstName);
@@ -58,7 +62,8 @@ export class AttendeeComponent implements OnInit {
 
   callingFunction() {
     console.log(this.profileForm.value);
-    this.httpClientService.addAttendeeProfile(this.profileForm).subscribe(result => { window.location.href = "/profile"; });
+    this.cookieValue = this.cookieService.get('userID');
+    this.httpClientService.addAttendeeProfile(this.profileForm, this.cookieValue).subscribe(result => { window.location.href = "/profile"; });
 
-}
+  }
 }
