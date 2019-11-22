@@ -11,8 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AttendeecareerfairComponent } from './attendeecareerfair/attendeecareerfair.component';
 import { LoginadminComponent } from './loginadmin/loginadmin.component';
 import { AdmincareerfairComponent } from './admincareerfair/admincareerfair.component';
-
-
+import { RegisteredattendeesComponent } from './registeredattendees/registeredattendees.component';
 
 
 const routes: Routes = [
@@ -26,7 +25,9 @@ const routes: Routes = [
   { path: 'attendee', component: AttendeeComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'attendeecareerfair', component: AttendeecareerfairComponent },
-  { path: 'admincareerfair', component: AdmincareerfairComponent }
+  { path: 'admincareerfair', component: AdmincareerfairComponent },
+  { path: 'registeredattendees', component: RegisteredattendeesComponent},
+  { path: 'registeredattendees/:id', component: RegisteredattendeesComponent}
 ];
 
 @NgModule({

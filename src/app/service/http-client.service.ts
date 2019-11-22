@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { FormGroup, FormControl } from '@angular/forms';
-import { stringify } from 'querystring';
 
 
 export class CareerFair {
@@ -52,6 +51,12 @@ export class ProfileViewModel {
   ) { }
 }
 
+export class RegisteredAttendeesViewModel {
+  constructor(
+    public attendeeProfileViewModel: ProfileViewModel[]
+  ) { }
+}
+
 export class Employer {
   constructor(
     public id: string,
@@ -98,7 +103,6 @@ export class HttpClientService {
 
   getProfileViewModel(userId: string): Observable<ProfileViewModel> {
     return this.httpClient.get<ProfileViewModel>('http://localhost:8080/attendees/' + userId + '/profile');
-
   }
 
   employerLogin(formGroup: FormGroup): Observable<Employer> {
@@ -112,4 +116,9 @@ export class HttpClientService {
   adminLogin(formGroup: FormGroup): Observable<Administrator> {
     return this.httpClient.post<Administrator>('http://localhost:8080/validateAdministrator', formGroup.value);
   }
+
+  getRegisteredAttendeeViewModel(careerFairId: string): Observable<RegisteredAttendeesViewModel[]> {
+    return this.httpClient.get<RegisteredAttendeesViewModel[]>('http://localhost:8080/careerfair/careerfairdetails/' + careerFairId + '/attendees');
+  }
+
 }

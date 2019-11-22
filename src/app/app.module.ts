@@ -16,6 +16,7 @@ import { AttendeecareerfairComponent } from './attendeecareerfair/attendeecareer
 import { AdmincareerfairComponent } from './admincareerfair/admincareerfair.component';
 import { CookieService } from 'ngx-cookie-service';
 import { LoginadminComponent } from './loginadmin/loginadmin.component';
+import { RegisteredattendeesComponent } from './registeredattendees/registeredattendees.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { LoginadminComponent } from './loginadmin/loginadmin.component';
     ProfileComponent,
     AttendeecareerfairComponent,
     AdmincareerfairComponent,
-    LoginadminComponent
+    LoginadminComponent,
+    RegisteredattendeesComponent
   ],
   imports: [
     BrowserModule,

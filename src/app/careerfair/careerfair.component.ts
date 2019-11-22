@@ -15,8 +15,6 @@ export class CareerfairComponent implements OnInit {
   constructor(private httpClientService:HttpClientService) { }
 
   ngOnInit() {
-
-
     var observable: Observable<CareerFair[]>;
     observable = this.httpClientService.getCareerFair();
     observable.subscribe(response => this.careerFairs = response);
