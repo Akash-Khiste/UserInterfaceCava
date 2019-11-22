@@ -67,9 +67,9 @@
                 <h3 class="card-title">{{careerFair.name}}</h3>
                 <p class="card-text">Venue : {{careerFair.venue}}</p>
                 <p class="card-text">Date :{{careerFair.date}}</p>
-                <a href="#" class="btn btn-outline-secondary">more info..</a>
+                <a class="btn btn-outline-secondary" [routerLink]="['/careerfairdetail', careerFair.careerFairID]"  routerLinkActive="active">more info...</a>  
 
-          
+                        
               </div>
             </div>
           </div>

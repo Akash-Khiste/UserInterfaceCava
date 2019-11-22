@@ -22,6 +22,7 @@ const routes: Routes = [
   { path: 'loginadmin', component: LoginadminComponent },
   { path: 'careerfair', component: CareerfairComponent },
   { path: 'careerfairdetail', component: CareerfairdetailComponent },
+  { path: 'careerfairdetail/:id', component: CareerfairdetailComponent },
   { path: 'attendee', component: AttendeeComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'attendeecareerfair', component: AttendeecareerfairComponent },
