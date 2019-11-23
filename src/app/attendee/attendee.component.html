@@ -1,8 +1,12 @@
 <body>
     <h1 id="AttendeeHeader">My Profile</h1>
 
-    <form [formGroup]="profileForm" (ngSubmit)="callingFunction()">
+       <form [formGroup]="profileForm" (ngSubmit)="callingFunction()">
         <div class="profileSectionHeader">CONTACT INFORMATION</div>
+
+        <div>
+            <label class="title">Email<input type="text" formControlName="email" disabled></label>
+        </div> <br>
 
         <div>
             <label class="title">First Name<input class="inputBox" type="text" formControlName="firstName"></label>
@@ -10,9 +14,7 @@
         <div>
             <label class="title">Last Name<input type="text" formControlName="lastName"></label>
         </div> <br>
-        <div>
-            <label class="title">Email<input type="text" formControlName="email"></label>
-        </div> <br>
+       
 
         <div class="profileSectionHeader">ADDRESS</div>
 

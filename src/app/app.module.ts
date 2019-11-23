@@ -14,6 +14,13 @@ import { ProfileComponent } from './profile/profile.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AttendeecareerfairComponent } from './attendeecareerfair/attendeecareerfair.component';
 import { AdmincareerfairComponent } from './admincareerfair/admincareerfair.component';
+import { CookieService } from 'ngx-cookie-service';
+import { LoginadminComponent } from './loginadmin/loginadmin.component';
+import { RegisteredattendeesComponent } from './registeredattendees/registeredattendees.component';
+//imports for dialog box
+import {MatDialogModule} from '@angular/material';
+import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -26,16 +33,26 @@ import { AdmincareerfairComponent } from './admincareerfair/admincareerfair.comp
     AttendeeComponent,
     ProfileComponent,
     AttendeecareerfairComponent,
-    AdmincareerfairComponent
+    AdmincareerfairComponent,
+    LoginadminComponent,
+    RegisteredattendeesComponent,
+    ConfirmationDialogComponent,
+
+
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule,
   ],
-  providers: [],
+  entryComponents: [
+    ConfirmationDialogComponent
+  ],
+  providers: [ CookieService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -7,23 +7,10 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-              <!--<li class="nav-item active">
-                <a class="nav-link" href="#">Home
-                  <span class="sr-only">(current)</span>
-                </a>
-              </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Career Fair</a>
+                <a class="nav-link" routerLink="/profile" routerLinkActive="active">My Profile</a>
+                
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Notification</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Profile</a>
-              </li>-->
-              <!-- <li class="nav-item">
-                <a class="nav-link" href="#">Admin Login</a>
-              </li> -->
             </ul>
           </div>
         </div>
@@ -37,28 +24,6 @@
             <!-- <p class="lead" style="text-align: center">Grab an opprtunity to meet your recruiters</p> -->
             <div class="row">
     
-              <!-- Card for career fairs - hardcoded data used for now -->
-                <!-- <div class="col-sm-4 py-2">
-                    <div class="card h-100 border-primary">
-                        <div class="card-body">
-                            <h3 class="card-title">Fall Career Fair 2019</h3>
-                            <p class="card-text">Venue : SAC</p>
-                            <p class="card-text">Date : 11/15/2019</p>
-                            <a href="#" class="btn btn-outline-secondary">more info..</a>
-                        </div>
-                    </div>
-                </div> -->
-    <!-- 
-                <div class="col-sm-4 py-2">
-                  <div class="card h-100 border-primary">
-                      <div class="card-body">
-                          <h3 class="card-title">Fall Career Fair 2019</h3>
-                          <p class="card-text">Venue : {{careerFairs[0].date}}</p>
-                          <p class="card-text">Date : 11/15/2019</p>
-                          <a href="#" class="btn btn-outline-secondary">more info..</a>
-                      </div>
-                  </div>
-              </div> -->
     
               <div class="col-sm-4 py-2" *ngFor = "let careerFair of careerFairs">
                 <div class="card h-100 border-primary">
@@ -66,7 +31,9 @@
                         <h3 class="card-title">{{careerFair.name}}</h3>
                         <p class="card-text">Venue : {{careerFair.venue}}</p>
                         <p class="card-text">Date :{{careerFair.date}}</p>
-                        <a href="#" class="btn btn-outline-secondary">more info..</a>
+                        <a class="btn btn-outline-secondary" [routerLink]="['/careerfairdetail', careerFair.careerFairID]"  routerLinkActive="active">View List of Recruiters</a>
+                        <!-- <a class="btn btn-outline-secondary" >Register</a> -->
+                        <button mat-raised-button (click)="openDialog()"> Register {{data}}</button> 
                     </div>
                 </div>
             </div>

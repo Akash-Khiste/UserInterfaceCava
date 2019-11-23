@@ -1,0 +1,33 @@
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light static-top mb-5 shadow">
+        <div class="container">
+            <a class="navbar-brand" href="#">CAVA</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="containerb">
+        <div class="card border-0 shadow my-5" style="margin: 100px;">
+            <div class="card-body p-5" style="padding:20px; margin-bottom: 20px">
+                <h1 class="font-weight-light" style="text-align: center">Registered Attendees</h1>
+                <div class="row" style="text-align: center;">
+                    <div class="col-sm-4 py-2 col-lg-12 col-md-6" style="text-align: center;">
+                        <div class="card h-100 border-primary" style="text-align: center;">
+                            <div class="card-body" style="text-align: center;"
+                                *ngFor="let attendeeProfileViewModel of RegisteredAttendeesViewModel">
+                                <p class="card-text">
+                                    {{RegisteredAttendeesViewModel.attendeeProfileViewModel.attendee.firstName}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
