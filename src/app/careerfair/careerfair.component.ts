@@ -18,10 +18,6 @@ export class CareerfairComponent implements OnInit {
     var observable: Observable<CareerFair[]>;
     observable = this.httpClientService.getCareerFair();
     observable.subscribe(response => this.careerFairs = response);
-  }
-
-  public openCareerFair(careerFairId: string) {
-    this.router.navigate(['/careerfairdetail', careerFairId]);
-   }
+  }  
 
 }
