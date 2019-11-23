@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClientService, CareerFair } from '../service/http-client.service';
 import { Observable } from 'rxjs';
+//imports for dialog box
+import { MatDialog } from '@angular/material';
+import { ConfirmationDialogComponent } from '../confirmation-dialog/confirmation-dialog.component';
+
 
 @Component({
   selector: 'app-attendeecareerfair',
@@ -12,12 +16,38 @@ export class AttendeecareerfairComponent implements OnInit {
   careerFairs: CareerFair[]
 
 
-  constructor(private httpClientService:HttpClientService) { }
+  constructor(private httpClientService:HttpClientService,
+    public dialog: MatDialog) { }
 
   ngOnInit() {    
     var observable: Observable<CareerFair[]>;
     observable = this.httpClientService.getCareerFair();
     observable.subscribe(response => this.careerFairs = response);
+  }
+  //constructor(public dialog: MatDialog) {}
+  returnResult ="";
+  openDialog(): void {
+    // save the event registration here 
+
+    const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
+      width: '250px'
+    });
+    
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      
+    });
+    //const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
+   
+     //});
+
+    //dialogRef.afterClosed().subscribe(result => {
+    //console.log('The dialog was closed');
+    //console.log(result);
+   
+//});
+
   }
 
 }

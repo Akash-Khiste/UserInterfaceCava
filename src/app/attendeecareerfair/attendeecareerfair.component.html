@@ -32,6 +32,8 @@
                         <p class="card-text">Venue : {{careerFair.venue}}</p>
                         <p class="card-text">Date :{{careerFair.date}}</p>
                         <a class="btn btn-outline-secondary" [routerLink]="['/careerfairdetail', careerFair.careerFairID]"  routerLinkActive="active">View List of Recruiters</a>
+                        <!-- <a class="btn btn-outline-secondary" >Register</a> -->
+                        <button mat-raised-button (click)="openDialog()"> Register {{data}}</button> 
                     </div>
                 </div>
             </div>

@@ -17,6 +17,10 @@ import { AdmincareerfairComponent } from './admincareerfair/admincareerfair.comp
 import { CookieService } from 'ngx-cookie-service';
 import { LoginadminComponent } from './loginadmin/loginadmin.component';
 import { RegisteredattendeesComponent } from './registeredattendees/registeredattendees.component';
+//imports for dialog box
+import {MatDialogModule} from '@angular/material';
+import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -31,14 +35,22 @@ import { RegisteredattendeesComponent } from './registeredattendees/registeredat
     AttendeecareerfairComponent,
     AdmincareerfairComponent,
     LoginadminComponent,
-    RegisteredattendeesComponent
+    RegisteredattendeesComponent,
+    ConfirmationDialogComponent,
+
+
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule,
+  ],
+  entryComponents: [
+    ConfirmationDialogComponent
   ],
   providers: [ CookieService ],
   bootstrap: [AppComponent]
