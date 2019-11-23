@@ -14,7 +14,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AttendeecareerfairComponent } from './attendeecareerfair/attendeecareerfair.component';
 import { AdmincareerfairComponent } from './admincareerfair/admincareerfair.component';
-import { CookieService } from 'ngx-cookie-service';
+import {CookieService} from 'ngx-cookie-service'
 import { LoginadminComponent } from './loginadmin/loginadmin.component';
 import { RegisteredattendeesComponent } from './registeredattendees/registeredattendees.component';
 //imports for dialog box
