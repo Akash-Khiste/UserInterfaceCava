@@ -19,10 +19,19 @@
                 <div class="row" style="text-align: center;">
                     <div class="col-sm-4 py-2 col-lg-12 col-md-6" style="text-align: center;">
                         <div class="card h-100 border-primary" style="text-align: center;">
-                            <div class="card-body" style="text-align: center;"
-                                *ngFor="let attendeeProfileViewModel of RegisteredAttendeesViewModel">
+                            <div class="card-body" style="text-align: left;"
+                                *ngFor="let profileViewModel of registeredAttendeesViewModel.attendeeProfileViewModel">
                                 <p class="card-text">
-                                    {{RegisteredAttendeesViewModel.attendeeProfileViewModel.attendee.firstName}}</p>
+                                    {{profileViewModel.attendee.firstName}} {{profileViewModel.attendee.lastName}} <br>
+                                    {{profileViewModel.attendee.email}} <br>
+                                    {{profileViewModel.attendee.city}} {{profileViewModel.attendee.state}} <br> 
+                                    <label>Major(s):</label>{{profileViewModel.attendeeProfile.major}} <br> 
+                                    <label>Minor(s):</label>{{profileViewModel.attendeeProfile.minor}} <br>            
+                                    <label>Total GPA:</label>{{profileViewModel.attendeeProfile.totalGPA}} <br>
+                                    <label>Degree Pursuing:</label>{{profileViewModel.attendeeProfile.degree}} <br>
+                                    <label>Certifications:</label>{{profileViewModel.attendeeProfile.certifications}} <br>
+                                    <label>Languages:</label>{{profileViewModel.attendeeProfile.languages}}
+                                </p>
                             </div>
                         </div>
                     </div>

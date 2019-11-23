@@ -117,8 +117,8 @@ export class HttpClientService {
     return this.httpClient.post<Administrator>('http://localhost:8080/validateAdministrator', formGroup.value);
   }
 
-  getRegisteredAttendeeViewModel(careerFairId: string): Observable<RegisteredAttendeesViewModel[]> {
-    return this.httpClient.get<RegisteredAttendeesViewModel[]>('http://localhost:8080/careerfair/careerfairdetails/' + careerFairId + '/attendees');
+  getRegisteredAttendeeViewModel(careerFairId: string): Observable<RegisteredAttendeesViewModel> {
+    return this.httpClient.get<RegisteredAttendeesViewModel>('http://localhost:8080/careerfair/careerfairdetails/' + careerFairId + '/attendees');
   }
 
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { CareerFair, HttpClientService } from '../service/http-client.service';
 
 @Component({
   selector: 'app-admincareerfair',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdmincareerfairComponent implements OnInit {
 
-  constructor() { }
+  careerFairs: CareerFair[]
+  constructor(private httpClientService: HttpClientService) { }
 
   ngOnInit() {
+    var observable: Observable<CareerFair[]>;
+    observable = this.httpClientService.getCareerFair();
+    observable.subscribe(response => this.careerFairs = response);
   }
 
 }
