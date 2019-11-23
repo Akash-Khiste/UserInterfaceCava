@@ -18,7 +18,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { LoginadminComponent } from './loginadmin/loginadmin.component';
 import { RegisteredattendeesComponent } from './registeredattendees/registeredattendees.component';
 //imports for dialog box
-import {MatDialogModule} from '@angular/material';
+import { MatDialogModule} from '@angular/material';
 import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
