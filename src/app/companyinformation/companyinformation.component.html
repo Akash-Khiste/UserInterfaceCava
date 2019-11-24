@@ -1,0 +1,51 @@
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light static-top mb-5 shadow">
+      <div class="container">
+        <a class="navbar-brand" href="#">CAVA</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+           
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+    <div class="containerb">
+      <div class="card border-0 shadow my-5" style="margin: 100px;">
+  
+        <div class="card-body p-5" style="padding:20px; margin-bottom: 20px">
+          <h1 class="font-weight-light" style="text-align: center">Company Information</h1>
+          
+          <div class="row">
+  
+           
+            <div class="col-sm-4 py-2" *ngFor="let companyinformation of companyInformations">
+              <div class="card h-100 border-primary">
+                <div class="card-body">
+                  <h3 class="card-title">{{companyinformation.companyname}}</h3>
+                  <p class="card-text">Company Domain : {{companyinformation.domain}}</p>
+                  <p class="card-text">Available Positions : {{companyinformation.positions}}</p>
+                  <!-- <a class="btn btn-outline-secondary" [routerLink]="['/registeredattendees', careerFair.careerFairID]"  routerLinkActive="active">View Registered Attendees</a>   -->
+  
+                  
+                </div>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+   </div>
+  </body>
+
+<!-- <div *ngFor = "let companyinformation of companyInformations">
+
+    <p>{{companyinformation.id}}</p>
+    <p>{{companyinformation.companyname}}</p>
+    <p>{{companyinformation.positions}}</p>
+    <p>{{companyinformation.domain}}</p>
+</div> -->

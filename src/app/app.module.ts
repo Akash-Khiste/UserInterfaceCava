@@ -21,6 +21,7 @@ import { RegisteredattendeesComponent } from './registeredattendees/registeredat
 import { MatDialogModule} from '@angular/material';
 import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { CompanyinformationComponent } from './companyinformation/companyinformation.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
     LoginadminComponent,
     RegisteredattendeesComponent,
     ConfirmationDialogComponent,
+    CompanyinformationComponent,
 
 
   ],
