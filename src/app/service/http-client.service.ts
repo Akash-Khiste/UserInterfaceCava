@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { FormGroup, FormControl } from '@angular/forms';
+import { AttendeecareerfairComponent } from '../attendeecareerfair/attendeecareerfair.component';
 
 
 export class CareerFair {
@@ -99,6 +100,9 @@ export class HttpClientService {
 
   addAttendeeProfile(formGroup: FormGroup, userId: string): Observable<any> {
     return this.httpClient.post<Attendee>('http://localhost:8080/attendees/' + userId + '/profile', formGroup.value);
+  }
+  RegisterdIdViewModel(formGroup: FormGroup,userId: string):Observable<any>{
+    return this.httpClient.post<CareerFair>('http://localhost:8080/attendeecareerfair/'+ userId +'/attendeecareerfair',formGroup.value);
   }
 
   getProfileViewModel(userId: string): Observable<ProfileViewModel> {
