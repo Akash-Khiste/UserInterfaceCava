@@ -11,18 +11,6 @@ body {
   overflow: auto;
   text-align: center;
 }
-  
-  /* body, html {
-    height: 100%;
-    font-family: Poppins-Regular, sans-serif;
-    font-size: 9pt;
-  } */
-
-    /* div {
-      margin: 10px;
-      padding-bottom: 10px;
-      width: 260px;
-  }    */
 
    .title {
       padding-top: 15px;
