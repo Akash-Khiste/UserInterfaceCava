@@ -12,6 +12,7 @@ import { AttendeecareerfairComponent } from './attendeecareerfair/attendeecareer
 import { LoginadminComponent } from './loginadmin/loginadmin.component';
 import { AdmincareerfairComponent } from './admincareerfair/admincareerfair.component';
 import { RegisteredattendeesComponent } from './registeredattendees/registeredattendees.component';
+import { CompanyinformationComponent } from './companyinformation/companyinformation.component';
 
 
 const routes: Routes = [
@@ -27,7 +28,8 @@ const routes: Routes = [
   { path: 'attendeecareerfair', component: AttendeecareerfairComponent },
   { path: 'admincareerfair', component: AdmincareerfairComponent },
   { path: 'registeredattendees', component: RegisteredattendeesComponent},
-  { path: 'registeredattendees/:id', component: RegisteredattendeesComponent}
+  { path: 'registeredattendees/:id', component: RegisteredattendeesComponent},
+  { path: 'companyinformation', component: CompanyinformationComponent}
 ];
 
 @NgModule({
