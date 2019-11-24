@@ -14,13 +14,14 @@ import { ProfileComponent } from './profile/profile.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AttendeecareerfairComponent } from './attendeecareerfair/attendeecareerfair.component';
 import { AdmincareerfairComponent } from './admincareerfair/admincareerfair.component';
-import { CookieService } from 'ngx-cookie-service';
+import {CookieService} from 'ngx-cookie-service'
 import { LoginadminComponent } from './loginadmin/loginadmin.component';
 import { RegisteredattendeesComponent } from './registeredattendees/registeredattendees.component';
 //imports for dialog box
-import {MatDialogModule} from '@angular/material';
+import { MatDialogModule} from '@angular/material';
 import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { CompanyinformationComponent } from './companyinformation/companyinformation.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
     LoginadminComponent,
     RegisteredattendeesComponent,
     ConfirmationDialogComponent,
+    CompanyinformationComponent,
 
 
   ],

@@ -1,77 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
-
-
-
-
-/*//////////////////////////////////////////////////////////////////
-[ FONT ]*/
-
-/*
-@font-face {
-  font-family: Poppins-Regular;
-  src: url('../fonts/poppins/Poppins-Regular.ttf');
+body {
+  background: url('../images/bgGreen.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }
 
-@font-face {
-  font-family: Poppins-Medium;
-  src: url('../fonts/poppins/Poppins-Medium.ttf');
+.containerb {
+  height: 100vh;
+  overflow: auto;
+  text-align: center;
 }
 
-@font-face {
-  font-family: Poppins-Bold;
-  src: url('../fonts/poppins/Poppins-Bold.ttf');
-}
-
-@font-face {
-  font-family: Poppins-SemiBold;
-  src: url('../fonts/poppins/Poppins-SemiBold.ttf');
-}
-
-@font-face {
-  font-family: Montserrat-Bold;
-  src: url('../fonts/montserrat/Montserrat-Bold.ttf');
-}
-
-@font-face {
-  font-family: Montserrat-SemiBold;
-  src: url('../fonts/montserrat/Montserrat-SemiBold.ttf');
-}
-
-@font-face {
-  font-family: Montserrat-Regular;
-  src: url('../fonts/montserrat/Montserrat-Regular.ttf');
-}
-*/
-
-
-/*//////////////////////////////////////////////////////////////////
-[ RESTYLE TAG ]*/
-
-/* * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-  } */
-  
-  body, html {
-    height: 100%;
-    font-family: Poppins-Regular, sans-serif;
-    font-size: 9pt;
-  }
-
-  div {
-      margin: 10px;
-      padding-bottom: 10px;
-      width: 260px;
-  }
-
-  .title {
-      float: left;
-      width: 150px;
-      text-align: left; 
-      padding-right: 10px;
+   .title {
+      padding-top: 15px;
       font-variant: small-caps;
-  }
+  } 
 
   .submit {
       text-align: left;
@@ -86,15 +30,15 @@
       font-size: 30px;
   }
 
-   .profileSectionHeader{
+    .profileSectionHeader{
       align-items: left;
       color: #046A38;
       padding-top: 20px;
-      font-size: 14px;
+      font-size: 18px;
       font-stretch: extra-expanded;
       font-weight: bold;
       
-  }
+  } 
 
  
 

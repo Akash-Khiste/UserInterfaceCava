@@ -17,7 +17,7 @@ export class AttendeeComponent implements OnInit {
   profileForm = new FormGroup({
     firstName: new FormControl(''),
     lastName: new FormControl(''),
-    email: new FormControl(''),
+    email: new FormControl('',),
     major: new FormControl(''),
     minor: new FormControl(''),
     totalGPA: new FormControl(''),

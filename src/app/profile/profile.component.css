@@ -1,21 +1,21 @@
-body, html {
-    height: 100%;
-    font-family: Poppins-Regular, sans-serif;
+body {
+    background: url('../images/bgGreen.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
   }
 
-  #AttendeeHeader{
-      text-align: center;
-      color: #046A38;
-  }
+  .containerb {
+    height: 100vh;
+    overflow: auto;
+    text-align: center;
+}
 
   #ProfileList{
       align-items: left;
   }
 
-  #ProfileField {
-    text-align: right;
-    font-variant: small-caps;
-}
 
 .title {
     float: left;

@@ -78,6 +78,15 @@ export class Administrator {
   ) { }
 }
 
+export class CompanyInformation{
+  constructor(
+    public id :string,
+    public companyname : string,
+    public domain : string,
+    public positions : string
+  ){ }
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -121,8 +130,14 @@ export class HttpClientService {
     return this.httpClient.post<Administrator>('http://localhost:8080/validateAdministrator', formGroup.value);
   }
 
-  getRegisteredAttendeeViewModel(careerFairId: string): Observable<RegisteredAttendeesViewModel[]> {
-    return this.httpClient.get<RegisteredAttendeesViewModel[]>('http://localhost:8080/careerfair/careerfairdetails/' + careerFairId + '/attendees');
+  getRegisteredAttendeeViewModel(careerFairId: string): Observable<RegisteredAttendeesViewModel> {
+    return this.httpClient.get<RegisteredAttendeesViewModel>('http://localhost:8080/careerfair/careerfairdetails/' + careerFairId + '/attendees');
   }
+
+  getCompanyInformation (){
+    console.log("Test Call");
+    return this.httpClient.get<CompanyInformation[]>('http://localhost:8080/companyinformation');
+  }
+
 
 }
