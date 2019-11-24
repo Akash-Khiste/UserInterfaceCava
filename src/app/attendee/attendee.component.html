@@ -1,62 +1,95 @@
 <body>
-    <h1 id="AttendeeHeader">My Profile</h1>
-
-       <form [formGroup]="profileForm" (ngSubmit)="callingFunction()">
-        <div class="profileSectionHeader">CONTACT INFORMATION</div>
-
-        <div>
-            <label class="title">Email<input type="text" formControlName="email" disabled></label>
-        </div> <br>
-
-        <div>
-            <label class="title">First Name<input class="inputBox" type="text" formControlName="firstName"></label>
-        </div> <br>
-        <div>
-            <label class="title">Last Name<input type="text" formControlName="lastName"></label>
-        </div> <br>
-       
-
-        <div class="profileSectionHeader">ADDRESS</div>
-
-        <div>
-            <label class="title">Street<input type="text" formControlName="streetName"></label>
-        </div> <br>
-        <div>
-            <label class="title">City<input type="text" formControlName="city"></label>
-        </div><br>
-        <div>
-            <label class="title">State<input type="text" formControlName="state"></label>
-        </div> <br>
-        <div>
-            <label class="title">Zipcode<input type="text" formControlName="zipCode"></label>
-        </div> <br>
-
-       <div class="profileSectionHeader">EDUCATION</div>
-
-        <div>
-            <label class="title">Major:<input type="text" formControlName="major"> </label>
-        </div> <br>
-        <div>
-            <label class="title"> Minor:<input type="text" formControlName="minor"> </label>
-        </div> <br>
-        <div>
-            <label class="title">Total GPA:<input type="text" formControlName="totalGPA"> </label>
-        </div> <br>
-        <div>
-            <label class="title">Degree:<input type="text" formControlName="degree"> </label>
-        </div> <br>
-        <div>
-            <label class="title">Certifications:<input type="text" formControlName="certifications"></label>
-        </div> <br>
-        <div>
-            <label class="title">Languages: <input type="text" formControlName="languages"></label>
-        </div> <br>
-        <div>
-            <label class="title"> Bio:<input type="text" formControlName="bio"></label>
-        </div> <br>
-        <div class="submit">
-            <button type="submit">Submit Profile</button>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light static-top mb-5 shadow">
+        <div class="container">
+            <a class="navbar-brand" href="#">CAVA</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                </ul>
+            </div>
         </div>
-    </form>
+    </nav>
+    <div class="containerb">
+        <div class="card border-0 shadow my-5" style="margin: 100px;">
+            <div class="card-body p-5" style="padding:20px; margin-bottom: 20px">
+                <h1 class="font-weight-light" style="text-align: center">Update Profile</h1>
+                <h5 class="font-weight-light" style="text-align: center">**This information will be visible to recruiters**</h5>
+                <div class="row" style="text-align: center;">
+                    <div class="col-sm-4 py-2 col-lg-12 col-md-6" style="text-align: left;">
+                        <div class="card h-100 border-primary" style="text-align: left;">
+                            <form [formGroup]="profileForm" (ngSubmit)="callingFunction()">
+                                <div class="profileSectionHeader">CONTACT INFORMATION</div><br>
 
+                                <div>
+                                    <label>Email<br><input type="text" formControlName="email" disabled></label>
+                                </div> <br>
+
+                                <div>
+                                    <label>First Name<br><input class="inputBox" type="text"
+                                            formControlName="firstName"></label>
+                                </div> <br>
+                                <div>
+                                    <label>Last Name<br><input type="text" formControlName="lastName"></label>
+                                </div> <br>
+                                <div class="profileSectionHeader">ADDRESS</div>
+                                <div>
+                                    <label class="title">Street<br><input type="text"
+                                            formControlName="streetName"></label>
+                                </div> <br>
+                                <div>
+                                    <label class="title">City<br><input type="text" formControlName="city"></label>
+                                </div><br>
+                                <div>
+                                    <label class="title">State<br><input type="text" formControlName="state"></label>
+                                </div> <br>
+                                <div>
+                                    <label class="title">Zipcode<br><input type="text"
+                                            formControlName="zipCode"></label>
+                                </div> <br>
+
+                                <div class="profileSectionHeader">EDUCATION AND BACKGROUND</div>
+
+                                <div>
+                                    <label class="title">Major(s):</label><br><textarea cols="50"
+                                        formControlName="major"> </textarea>
+                                </div>
+                                <div>
+                                    <label class="title"> Minor(s):</label><br><textarea cols="50"
+                                        formControlName="minor"> </textarea>
+                                </div>
+                                <div>
+                                    <label class="title">Total GPA:</label><br><textarea cols="20"
+                                        formControlName="totalGPA"></textarea>
+                                </div>
+                                <div>
+                                    <label class="title">Degree Pursuing:</label><br><textarea cols="50"
+                                        formControlName="degree"></textarea>
+                                </div>
+                                <div>
+                                    <label class="title">Certifications:</label><br><textarea cols="50"
+                                        formControlName="certifications"></textarea>
+                                </div>
+                                <div>
+                                    <label class="title">Languages:</label><br><textarea cols="50"
+                                        formControlName="languages"></textarea>
+                                </div>
+                                <div>
+                                    <label class="title">Bio:</label><br><textarea rows="10" cols="100"
+                                        formControlName="bio"></textarea>
+                                </div>
+                                <div class="submit">
+                                    <button type="submit">Submit Profile</button>
+                                    <a class="nav-link" routerLink="/profile" routerLinkActive="active">Cancel</a>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>

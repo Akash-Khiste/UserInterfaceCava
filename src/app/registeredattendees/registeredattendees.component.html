@@ -20,11 +20,13 @@
                     <div class="col-sm-4 py-2 col-lg-12 col-md-6" style="text-align: center;">
                         <div class="card h-100 border-primary" style="text-align: center;">
                             <div class="card-body" style="text-align: left;"
+                            
                                 *ngFor="let profileViewModel of registeredAttendeesViewModel.attendeeProfileViewModel">
                                 <p class="card-text">
                                     {{profileViewModel.attendee.firstName}} {{profileViewModel.attendee.lastName}} <br>
                                     {{profileViewModel.attendee.email}} <br>
                                     {{profileViewModel.attendee.city}} {{profileViewModel.attendee.state}} <br> 
+                                    <label>Bio:</label>{{profileViewModel.attendeeProfile.bio}} <br> 
                                     <label>Major(s):</label>{{profileViewModel.attendeeProfile.major}} <br> 
                                     <label>Minor(s):</label>{{profileViewModel.attendeeProfile.minor}} <br>            
                                     <label>Total GPA:</label>{{profileViewModel.attendeeProfile.totalGPA}} <br>
