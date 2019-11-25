@@ -45,8 +45,9 @@
                             <!-- <p class="card-text"style="text-align: left;">Venue : SAC</p>
                             <p class="card-text"style="text-align: left;">Date : 11/15/2019</p>
                             <p class="card-text" style="text-align: left;">Companies : -</p> -->
-                            <p class="card-text">{{company.companyname}}</p>
-                          
+                            <!-- <p class="card-text">{{company.companyname}}</p> -->
+                            <a class="card-text" routerLink="/companyinformation" routerLinkActive="active">{{company.companyname}}</a>
+                            <!-- <a class="btn btn-outline-secondary" [routerLink]="['/companyinformation', careerFair.careerFairID]"  routerLinkActive="active">{{company.companyname}}</a>   -->
                             
                         </div>
                     </div>
