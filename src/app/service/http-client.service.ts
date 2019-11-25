@@ -100,10 +100,8 @@ export class HttpClientService {
     return this.httpClient.get<CareerFair[]>('http://localhost:8080/careerfairs/');
   }
 
-
-  getCompanies() {
-    console.log("Test Call");
-    return this.httpClient.get<Companies[]>('http://localhost:8080/companies/');
+  getCompanies(careerFairId: string) {
+    return this.httpClient.get<Companies[]>('http://localhost:8080/careerfair/' + careerFairId + '/companies');
   }
 
   addAttendeeProfile(formGroup: FormGroup, userId: string): Observable<any> {

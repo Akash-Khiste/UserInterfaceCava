@@ -23,7 +23,7 @@ export class CareerfairdetailComponent implements OnInit {
     //TODO: This block is the one that needs updated...You'll need update the getCompanies() method below to get career fair companies by career fair id
     // which is the id in the line above. Just update the method in http-client.service.ts so it takes a parameter and calls the correct controller method in rest api
     var observable: Observable<Companies[]>;
-    observable = this.httpClientService.getCompanies();
+    observable = this.httpClientService.getCompanies(this.id);
     observable.subscribe(response => this.companies = response);
     
   }
