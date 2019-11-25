@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { MatDialog } from '@angular/material';
 import { ConfirmationDialogComponent } from '../confirmation-dialog/confirmation-dialog.component';
 import { CookieService } from 'ngx-cookie-service';
+import { LoginattendeeComponent } from '../loginattendee/loginattendee.component';
 
 
 @Component({
@@ -15,46 +16,40 @@ import { CookieService } from 'ngx-cookie-service';
 export class AttendeecareerfairComponent implements OnInit {
   private cookieValue: string;
   careerFairs: CareerFair[]
+  cookieService: any;
+  
 
 
   constructor(private httpClientService:HttpClientService,
-    public dialog: MatDialog, private cookieService: CookieService) { }
+    public dialog: MatDialog,cookieService: CookieService) { }
 
-
-  ngOnInit() {    
-    // get the cookie for user ID 
-    this.cookieValue = this.cookieService.get('userID');
+  ngOnInit() {  
     
+    this.cookieValue = this.cookieService.get('userID');
+
     var observable: Observable<CareerFair[]>;
     observable = this.httpClientService.getCareerFair();
     observable.subscribe(response => this.careerFairs = response);
+   // observable = this.httpClientService.RegisterdIdAttendeeViewModel( this.RegisterdId);
+    observable = this.httpClientService.RegisterdIdAttendeeViewModel(this.cookieValue);
   }
+  RegisterdId : string;   
+  openDialog(): string {
+    // code to send userid
+    // call method used in https service class at backend
 
-
-  //constructor(public dialog: MatDialog) {}
-  returnResult ="";
-  openDialog(): void {
-    // save the event registration here 
-
+    this.RegisterdId = this.cookieService.get('userID');
     const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
-      width: '250px'
+    
     });
     
+    return this.RegisterdId;
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
       
-    });
-    //const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
+    }); 
    
-     //});
-
-    //dialogRef.afterClosed().subscribe(result => {
-    //console.log('The dialog was closed');
-    //console.log(result);
-   
-//});
-
   }
 
 }
