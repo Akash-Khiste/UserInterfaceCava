@@ -96,9 +96,8 @@ export class HttpClientService {
   constructor(private httpClient: HttpClient) { }
 
 
-  getCareerFair() {
-    console.log("Test Call");
-    return this.httpClient.get<CareerFair[]>('http://localhost:8080/careerfairs/');
+  getCareerFairs() {
+   return this.httpClient.get<CareerFair[]>('http://localhost:8080/careerfairs/');
   }
 
   getCompanies(careerFairId: string) {

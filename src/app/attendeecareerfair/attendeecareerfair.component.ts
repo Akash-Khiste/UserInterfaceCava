@@ -5,7 +5,6 @@ import { Observable } from 'rxjs';
 import { MatDialog } from '@angular/material';
 import { ConfirmationDialogComponent } from '../confirmation-dialog/confirmation-dialog.component';
 import { CookieService } from 'ngx-cookie-service';
-import { LoginattendeeComponent } from '../loginattendee/loginattendee.component';
 
 
 @Component({
@@ -18,20 +17,14 @@ export class AttendeecareerfairComponent implements OnInit {
   careerFairs: CareerFair[]
   cookieService: any;
   
-
-
   constructor(private httpClientService:HttpClientService,
     public dialog: MatDialog,cookieService: CookieService) { }
 
-  ngOnInit() {  
-    
-    this.cookieValue = this.cookieService.get('userID');
-
+  ngOnInit() {      
     var observable: Observable<CareerFair[]>;
-    observable = this.httpClientService.getCareerFair();
+    observable = this.httpClientService.getCareerFairs();
     observable.subscribe(response => this.careerFairs = response);
-   // observable = this.httpClientService.RegisterdIdAttendeeViewModel( this.RegisterdId);
-    observable = this.httpClientService.RegisterdIdAttendeeViewModel(this.cookieValue);
+   
   }
   RegisterdId : string;   
   openDialog(): string {

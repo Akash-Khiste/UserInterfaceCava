@@ -9,6 +9,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                 </ul>
+                <a class="nav-link" routerLink="/careerfair" routerLinkActive="active">Return to Career Fairs</a>
             </div>
         </div>
     </nav>
@@ -16,13 +17,13 @@
         <div class="card border-0 shadow my-5" style="margin: 100px;">
             <div class="card-body p-5" style="padding:20px; margin-bottom: 20px">
                 <h1 class="font-weight-light" style="text-align: center">Registered Attendees</h1>
+                
                 <div class="row" style="text-align: center;">
                     <div class="col-sm-4 py-2 col-lg-12 col-md-6" style="text-align: center;">
-                        <div class="card h-100 border-primary" style="text-align: center;">
-                            <div class="card-body" style="text-align: left;"
-                            
+                        <div class="card h-100 border-primary" style="text-align: center;">                           
+                            <div class="card-body" style="text-align: left;"                                                     
                                 *ngFor="let profileViewModel of registeredAttendeesViewModel.attendeeProfileViewModel">
-                                <p class="card-text">
+                                <p class="card-text">                                
                                     {{profileViewModel.attendee.firstName}} {{profileViewModel.attendee.lastName}} <br>
                                     {{profileViewModel.attendee.email}} <br>
                                     {{profileViewModel.attendee.city}} {{profileViewModel.attendee.state}} <br> 
@@ -34,6 +35,7 @@
                                     <label>Languages:</label>{{profileViewModel.attendeeProfile.languages}} <br>
                                     <label>Bio:</label><br>{{profileViewModel.attendeeProfile.bio}}
                                 </p>
+
                             </div>
                         </div>
                     </div>

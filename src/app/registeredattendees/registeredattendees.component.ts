@@ -12,6 +12,7 @@ export class RegisteredattendeesComponent implements OnInit {
   
   id: string;
   registeredAttendeesViewModel: RegisteredAttendeesViewModel;
+  message: string;
 
   constructor(private httpClientService: HttpClientService, private route: ActivatedRoute) { }
 
@@ -23,7 +24,8 @@ export class RegisteredattendeesComponent implements OnInit {
     var observable: Observable<RegisteredAttendeesViewModel>;
     observable = this.httpClientService.getRegisteredAttendeeViewModel(this.id);
     observable.subscribe(response => {
-      this.registeredAttendeesViewModel = response
+      this.registeredAttendeesViewModel = response;       
+
     });
   }
 
