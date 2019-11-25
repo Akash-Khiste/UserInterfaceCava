@@ -17,20 +17,27 @@ export class AttendeecareerfairComponent implements OnInit {
 
   careerFairs: CareerFair[]
   cookieService: any;
+  private cookieValue: string;
 
 
   constructor(private httpClientService:HttpClientService,
     public dialog: MatDialog,cookieService: CookieService) { }
 
-  ngOnInit() {    
+  ngOnInit() {  
+    
+    this.cookieValue = this.cookieService.get('userID');
+
     var observable: Observable<CareerFair[]>;
     observable = this.httpClientService.getCareerFair();
     observable.subscribe(response => this.careerFairs = response);
-    observable = this.httpClientService.RegisterdIdViewModel( this.RegisterdId);
+   // observable = this.httpClientService.RegisterdIdAttendeeViewModel( this.RegisterdId);
+    observable = this.httpClientService.RegisterdIdAttendeeViewModel(this.cookieValue);
   }
-  RegisterdId : string;
+  RegisterdId : string;   
   openDialog(): string {
     // code to send userid
+    // call method used in https service class at backend
+
     this.RegisterdId = this.cookieService.get('userID');
     const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
     
