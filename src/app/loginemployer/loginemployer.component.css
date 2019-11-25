@@ -186,6 +186,7 @@
   /*==================================================================
   [ login more ]*/
   .login100-more {
+    background-image:url(../images/UNCC.jpg);
     width: calc(100% - 560px);
     background-repeat: no-repeat;
     background-size: cover;

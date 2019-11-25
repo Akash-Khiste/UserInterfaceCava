@@ -1,7 +1,7 @@
 
 
 * {
-    margin: 0px;
+    margin: 0px; 
     padding: 0px;
     box-sizing: border-box;
   }
@@ -154,6 +154,7 @@
   }
   
   .container-login100 {
+    background-image:url(../images/loginimg.jpeg);
     width: 100%;
     min-height: 100vh;
     display: -webkit-box;
@@ -186,6 +187,7 @@
   /*==================================================================
   [ login more ]*/
   .login100-more {
+    background-image:url(../images/UNCC.jpg);
     width: calc(100% - 560px);
     background-repeat: no-repeat;
     background-size: cover;
