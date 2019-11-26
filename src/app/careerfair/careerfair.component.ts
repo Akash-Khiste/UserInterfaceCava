@@ -29,11 +29,11 @@ export class CareerfairComponent implements OnInit {
   RegisterdId : string;
   openDialog(): string {
     // code to send userid
-    this.RegisterdId = this.cookieService.get('userID');
+    console.log("clicked the button")
     const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
     
     });
-    
+    this.RegisterdId = this.cookieService.get('userID');
     return this.RegisterdId;
 
     dialogRef.afterClosed().subscribe(result => {

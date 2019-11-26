@@ -13,7 +13,7 @@ export class CareerfairdetailComponent implements OnInit {
   
   companies: Companies[];
   id: string;
- 
+  
   constructor(private httpClientService: HttpClientService, private route: ActivatedRoute) { }
  
   ngOnInit() {

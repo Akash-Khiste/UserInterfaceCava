@@ -100,9 +100,18 @@ export class HttpClientService {
    return this.httpClient.get<CareerFair[]>('http://localhost:8080/careerfairs/');
   }
 
+  
+
   getCompanies(careerFairId: string) {
     return this.httpClient.get<Companies[]>('http://localhost:8080/careerfair/' + careerFairId + '/companies');
   }
+
+  
+  getCompanyInformation (){
+    console.log("Test Call");
+    return this.httpClient.get<CompanyInformation[]>('http://localhost:8080/companyinformation');
+  }
+
 
   addAttendeeProfile(formGroup: FormGroup, userId: string): Observable<any> {
     return this.httpClient.post<Attendee>('http://localhost:8080/attendees/' + userId + '/profile', formGroup.value);
@@ -135,10 +144,6 @@ export class HttpClientService {
     return this.httpClient.get<RegisteredAttendeesViewModel>('http://localhost:8080/careerfair/careerfairdetails/' + careerFairId + '/attendees');
   }
 
-  getCompanyInformation (){
-    console.log("Test Call");
-    return this.httpClient.get<CompanyInformation[]>('http://localhost:8080/companyinformation');
-  }
 
 
 }

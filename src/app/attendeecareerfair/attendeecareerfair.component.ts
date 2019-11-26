@@ -31,11 +31,11 @@ export class AttendeecareerfairComponent implements OnInit {
     // code to send userid
     // call method used in https service class at backend
 
-    this.RegisterdId = this.cookieService.get('userID');
+   
     const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
     
     });
-    
+    this.RegisterdId = this.cookieService.get('userID');
     return this.RegisterdId;
 
     dialogRef.afterClosed().subscribe(result => {

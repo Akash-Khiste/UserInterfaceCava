@@ -8,9 +8,10 @@
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" routerLink="/profile" routerLinkActive="active">My Profile</a>  <a class="nav-link" routerLink="/" routerLinkActive="active">Log Out</a>  
-                
-                
+                <a class="nav-link" routerLink="/profile" routerLinkActive="active">My Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/" routerLinkActive="active">Log Out</a>  
               </li>
             </ul>
           </div>
@@ -34,7 +35,7 @@
                         <p class="card-text">Date :{{careerFair.date}}</p>
                         <a class="btn btn-outline-secondary" [routerLink]="['/careerfairdetail', careerFair.careerFairID]"  routerLinkActive="active">View List of Recruiters</a>
                         <!-- <a class="btn btn-outline-secondary" >Register</a> -->
-                        <button mat-raised-button (click)="openDialog()"> Register {{data}}</button> 
+                        <button mat-raised-button (click)="openDialog()" class="btn btn-outline-secondary" style="margin-left: 20px;"> Register {{data}}</button> 
                       
                     </div>
                 </div>
