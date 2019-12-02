@@ -7,6 +7,10 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <!-- <a class="nav-link" [routerLink]="['/companyinformation', careerFair.careerFairID]"  routerLinkActive="active">Recruiters Information</a> -->
+                    <a class="nav-link" routerLink="/companyinformation" routerLinkActive="active">Recruiters Information</a>
+                  </li>
              
             </ul>
           </div>
@@ -30,7 +34,7 @@
                             <p class="card-text"style="text-align: left;">Date : 11/15/2019</p>
                             <p class="card-text" style="text-align: left;">Companies : -</p> -->
                             <!-- <p class="card-text">{{company.companyname}}</p> -->
-                            <a class="card-text" routerLink="/companyinformation" routerLinkActive="active">{{company.companyname}}</a>
+                            <p class="card-text">{{company.companyname}}</p>
                             <!-- <a class="btn btn-outline-secondary" [routerLink]="['/companyinformation', careerFair.careerFairID]"  routerLinkActive="active">{{company.companyname}}</a>   -->
                             
                         </div>

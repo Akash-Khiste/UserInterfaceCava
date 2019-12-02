@@ -78,13 +78,14 @@ export class Administrator {
   ) { }
 }
 
-export class CompanyInformation{
+export class CompanyInformation {
   constructor(
-    public id :string,
-    public companyname : string,
-    public domain : string,
-    public positions : string
-  ){ }
+    public careerFairId : string,
+    public id: string,
+    public companyname: string,
+    public domain: string,
+    public positions: string
+  ) { }
 }
 
 @Injectable({
@@ -100,28 +101,30 @@ export class HttpClientService {
    return this.httpClient.get<CareerFair[]>('http://localhost:8080/careerfairs/');
   }
 
-  
+
 
   getCompanies(careerFairId: string) {
+    //console.log(careerFairId);
     return this.httpClient.get<Companies[]>('http://localhost:8080/careerfair/' + careerFairId + '/companies');
   }
 
-  
-  getCompanyInformation (){
-    console.log("Test Call");
-    return this.httpClient.get<CompanyInformation[]>('http://localhost:8080/companyinformation');
-  }
 
+  // method for getting company information for a career fair
+  getCompanyInformation(careerFairId: string) {
+    console.log('id mila kya '+careerFairId);
+    return this.httpClient.get<CompanyInformation[]>('http://localhost:8080/careerfair/careerfairdetails/' + careerFairId + '/companyinformationdisplay');
+    //return this.httpClient.get<CompanyInformation[]>('http://localhost:8080/careerfair/careerfairdetails/1/companyinformationdisplay');
+  }
 
   addAttendeeProfile(formGroup: FormGroup, userId: string): Observable<any> {
     return this.httpClient.post<Attendee>('http://localhost:8080/attendees/' + userId + '/profile', formGroup.value);
   }
-  RegisterdIdAttendeeViewModel(userId: string):Observable<any>{
-    console.log("Test Call");
-    return this.httpClient.post<CareerFair>('http://localhost:8080/attendeecareerfair/'+ userId,{});
+  RegisterdIdAttendeeViewModel(userId: string): Observable<any> {
+    console.log('Test Call');
+    return this.httpClient.post<CareerFair>('http://localhost:8080/attendeecareerfair/' + userId, {});
   }
-  RegisterdIdEmployeeViewModel(userId: string):Observable<any>{
-    return this.httpClient.post<CareerFair>('http://localhost:8080/attendeecareerfair/'+ userId ,{});
+  RegisterdIdEmployeeViewModel(userId: string): Observable<any> {
+    return this.httpClient.post<CareerFair>('http://localhost:8080/attendeecareerfair/' + userId , {});
   }
 
   getProfileViewModel(userId: string): Observable<ProfileViewModel> {

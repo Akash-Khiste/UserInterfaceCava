@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClientService, Companies} from '../service/http-client.service';
+import {HttpClientService, Companies, CareerFair} from '../service/http-client.service';
 import { Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 
