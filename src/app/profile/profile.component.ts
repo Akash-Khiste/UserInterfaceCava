@@ -19,9 +19,14 @@ export class ProfileComponent implements OnInit {
      // get the cookie for user ID 
      this.cookieValue = this.cookieService.get('userID');
 
+     if (!this.cookieValue){
+      window.location.href = "/";
+     }
+
     var observable: Observable<ProfileViewModel>;
     observable = this.httpClientService.getProfileViewModel(this.cookieValue);
     observable.subscribe(response => this.profileViewModel = response);
+    //
   }
 
 }

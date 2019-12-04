@@ -17,7 +17,7 @@ export class AttendeeComponent implements OnInit {
   profileForm = new FormGroup({
     firstName: new FormControl(''),
     lastName: new FormControl(''),
-    email: new FormControl('',),
+    email: new FormControl(''),
     major: new FormControl(''),
     minor: new FormControl(''),
     totalGPA: new FormControl(''),
@@ -37,6 +37,10 @@ export class AttendeeComponent implements OnInit {
 
     // get the cookie for user ID 
     this.cookieValue = this.cookieService.get('userID');
+
+    if (!this.cookieValue) {
+      window.location.href = "/";
+    }
 
     var observable: Observable<ProfileViewModel>;
     observable = this.httpClientService.getProfileViewModel(this.cookieValue);

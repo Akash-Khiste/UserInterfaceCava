@@ -22,6 +22,7 @@ export class LoginemployerComponent implements OnInit {
   constructor(private httpClientService: HttpClientService, private cookieService: CookieService) { }
 
   ngOnInit() {
+     
   }
 
   callingFunction() {

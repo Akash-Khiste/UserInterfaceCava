@@ -22,6 +22,7 @@ import { MatDialogModule} from '@angular/material';
 import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { CompanyinformationComponent } from './companyinformation/companyinformation.component';
+import { EmployerregisteredComponent } from './employerregistered/employerregistered.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { CompanyinformationComponent } from './companyinformation/companyinforma
     RegisteredattendeesComponent,
     ConfirmationDialogComponent,
     CompanyinformationComponent,
+    EmployerregisteredComponent,
 
 
   ],

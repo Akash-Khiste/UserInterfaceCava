@@ -119,9 +119,8 @@ export class HttpClientService {
   addAttendeeProfile(formGroup: FormGroup, userId: string): Observable<any> {
     return this.httpClient.post<Attendee>('http://localhost:8080/attendees/' + userId + '/profile', formGroup.value);
   }
-  RegisterdIdAttendeeViewModel(userId: string): Observable<any> {
-    console.log('Test Call');
-    return this.httpClient.post<CareerFair>('http://localhost:8080/attendeecareerfair/' + userId, {});
+  registerAttendee(userId: string, careerFairId: string): Observable<any> {
+    return this.httpClient.post<Attendee>('http://localhost:8080/careerfair/register/'+ careerFairId, userId);
   }
   RegisterdIdEmployeeViewModel(userId: string): Observable<any> {
     return this.httpClient.post<CareerFair>('http://localhost:8080/attendeecareerfair/' + userId , {});
