@@ -32,6 +32,7 @@ const routes: Routes = [
   { path: 'registeredattendees', component: RegisteredattendeesComponent},
   { path: 'registeredattendees/:id', component: RegisteredattendeesComponent},
   { path: 'companyinformation', component: CompanyinformationComponent},
+  { path: 'companyinformation/:id', component: CompanyinformationComponent},
   { path: 'employerregistered', component: EmployerregisteredComponent},
   { path: 'employerregistered/:id', component: EmployerregisteredComponent}
 ];

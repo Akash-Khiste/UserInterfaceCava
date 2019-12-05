@@ -14,12 +14,12 @@ export class AdmincareerfairComponent implements OnInit {
   constructor(private httpClientService: HttpClientService, private cookieService: CookieService) { }
 
   ngOnInit() {
-      // get the cookie for user ID 
-      this.cookieValue = this.cookieService.get('userID');
+    // get the cookie for user ID 
+    this.cookieValue = this.cookieService.get('userID');
 
-      if (!this.cookieValue){
-       window.location.href = "/";
-      }
+    if (!this.cookieValue) {
+      window.location.href = "/";
+    }
 
     var observable: Observable<CareerFair[]>;
     observable = this.httpClientService.getCareerFairs();

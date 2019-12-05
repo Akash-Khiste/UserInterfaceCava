@@ -15,7 +15,7 @@ import { CookieService } from 'ngx-cookie-service';
 export class AttendeecareerfairComponent implements OnInit {
   private cookieValue: string;
   careerFairs: CareerFair[]
-  
+
 
   constructor(private httpClientService: HttpClientService,
     public dialog: MatDialog, private cookieService: CookieService) { }
@@ -36,7 +36,6 @@ export class AttendeecareerfairComponent implements OnInit {
   openDialog(): string {
     // code to send userid
     // call method used in https service class at backend
-
 
     const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
 

@@ -113,7 +113,7 @@ export class HttpClientService {
   getCompanyInformation(careerFairId: string) {
     console.log('id mila kya '+careerFairId);
     return this.httpClient.get<CompanyInformation[]>('http://localhost:8080/careerfair/careerfairdetails/' + careerFairId + '/companyinformationdisplay');
-    //return this.httpClient.get<CompanyInformation[]>('http://localhost:8080/careerfair/careerfairdetails/1/companyinformationdisplay');
+    
   }
 
   addAttendeeProfile(formGroup: FormGroup, userId: string): Observable<any> {
